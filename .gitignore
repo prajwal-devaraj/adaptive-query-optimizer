@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+
+# Logs
+logs/query_logs.csv
+seed_output.log
+
+# Model (optional: include or exclude)
+ml/model.pkl
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store

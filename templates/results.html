@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card glass">
+  {% if error %}
+    <h2>{{ error }}</h2>
+  {% else %}
+    <h2>Execution Result</h2>
+    <p><strong>Strategy:</strong> {{ strategy }}</p>
+    <p><strong>Reason:</strong> {{ reason }}</p>
+    <p><strong>Predicted Runtime:</strong> {{ predicted_time if predicted_time is not none else 'Model not trained yet' }} ms</p>
+    <p><strong>Actual Runtime:</strong> {{ actual_time }} ms</p>
+
+    <h3>Query</h3>
+    <pre>{{ query }}</pre>
+
+    <h3>Extracted Features</h3>
+    <div class="feature-grid">
+      {% for k, v in features.items() %}
+      <div class="mini-card">
+        <span>{{ k }}</span>
+        <strong>{{ v }}</strong>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h3>Returned Rows (Preview)</h3>
+    <p>Total preview rows: {{ row_count }}</p>
+    <div class="table-box">
+      <pre>{{ rows }}</pre>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

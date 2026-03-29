@@ -1,0 +1,40 @@
+adaptive-query-optimizer/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── .devcontainer/
+│   └── devcontainer.json
+│
+├── config/
+│   └── settings.py
+│
+├── database/
+│   ├── db.py
+│   ├── schema.sql
+│   ├── seed_data.py
+│   └── workload_queries.py
+│
+├── ml/
+│   ├── feature_extractor.py
+│   ├── train_model.py
+│   ├── predict.py
+│   └── model.pkl
+│
+├── services/
+│   ├── optimizer_service.py
+│   ├── executor_service.py
+│   └── logging_service.py
+│
+├── logs/
+│   └── query_logs.csv
+│
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── dashboard.html
+│   └── results.html
+│
+└── static/
+    ├── style.css
+    └── app.js

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero glass">
+  <h1>Adaptive Query Optimization</h1>
+  <p>
+    Compare static query execution with ML-guided adaptive optimization using a modern analytics dashboard.
+  </p>
+</section>
+
+<section class="grid two-col">
+  <div class="card glass">
+    <h2>Run SQL Query</h2>
+    <form method="POST" action="/run">
+      <textarea name="query" rows="10" placeholder="Enter SQL query here..."></textarea>
+      <button type="submit">Execute Query</button>
+    </form>
+  </div>
+
+  <div class="card glass">
+    <h2>Sample Workload Queries</h2>
+    <ul class="query-list">
+      {% for q in queries %}
+      <li>{{ q }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}
