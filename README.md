@@ -148,10 +148,6 @@ Author
 
 Prajwal Devaraj
 
-Note
-
-This project was fully designed and implemented independently by Prajwal Devaraj. It was developed for academic purposes and later shared for submission use.
-
 License
 
 This project is intended for academic and research purposes.
